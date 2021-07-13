@@ -6,12 +6,12 @@ import React, { useState } from "react";
 
 const useStyles = makeStyles({
   container: {
-    height: "200px",
+    height: "230px",
     width: "300px",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "flex-end",
     margin: 0,
     padding: 0,
     border: "1px solid black",
@@ -31,10 +31,10 @@ const useStyles = makeStyles({
   },
   alert: {
     position: "absolute",
-    color: "red",
     fontWeight: "bold",
     top: "20px",
-    fontSize: "0.6em",
+    fontSize: "12px",
+    color: "red",
   },
 });
 
@@ -63,9 +63,11 @@ function App() {
         <Typography className={classes.alert}>{error}</Typography>
       ) : null}
       <TextField
+        placeholder="Paste event ID to jump :)"
         value={value}
         onChange={handleChange}
         className={classes.input}
+        autoFocus
         inputProps={{ className: classes.inputProps }}
       />
       <img src={jumperIcon} alt="jumper-img" className={classes.icon} />
