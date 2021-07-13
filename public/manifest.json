@@ -1,8 +1,9 @@
 {
   "name": "Dashboard Jumper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "manifest_version": 2,
   "description": "Lets you navigate to any Bizzabo event dashboard by ID",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';",
   "icons": {
     "16": "dashboardJumperIcon16.png",
     "48": "dashboardJumperIcon48.png",
